@@ -1,8 +1,10 @@
 
 var x = 50;
 var y = 50;
-var speedx = 2;
-var speedy = 5;
+var speedx = 10;
+var speedy = 10;
+
+bal = new
 
 
 /**
@@ -26,8 +28,13 @@ function draw() {
   background('blue');
   // stel vulkleur in
   fill(100, 100, 255);
+  
 
   // teken een cirkel
+  ellipse(x,y,80,80);
+  ellipse(x,y,80,80);
+  ellipse(x,y,80,80);
+  ellipse(x,y,80,80);
   ellipse(x,y,80,80);
   x = x + speedx;
   y = y + speedy;
@@ -38,5 +45,13 @@ function draw() {
 
   if(y == 40) {
     speedy = speedy * -1;
+  }
+
+  if(x == 1240) {
+    speedx = speedx * -1;
+  }
+
+  if(x == 40) {
+    speedx = speedx * -1;
   }
 }
