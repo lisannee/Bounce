@@ -1,29 +1,33 @@
-class bal {
+class Bal {
     x;
     y;
     speedX;
     speedY;
-    kleur;
-}
-
-constructor(_x, _y){
-    this.x = _x;
-    this.y = _y;
-    this.speedX = 2;
-    this.speedY = -3;
-    this.kleur = color(0,0,0);
-}
-
-show(){
-    Fill(this.kleur);
-    ellipse(this.x, this.y, 80, 80);
-}
-
-update(){
-    if(this.x <= 0){
-        thids.speedX = this.speedX * -1;
+  
+    constructor(_x, _y) {
+      this.x = _x;
+      this.y = _y;
+      this.speedX = 3;
+      this.speedY = -4;
     }
-    if(this.y <= 0){
-        thids.speedY = this.speedY * -1;
+  
+    // update de positie van de bal en klapt bij
+    // de kant de snelheid om
+    update() {
+      this.x = this.x + this.speedX;
+      this.y = this.y + this.speedY;
+  
+      if (this.x <=40 || this.x >= 1240) {
+        this.speedX = this.speedX * -1;
+      }
+      if (this.y <=40 || this.y >= 680) {
+        this.speedY = this.speedY * -1;
+      }
+    }
+  
+    // toont de bal
+    show() {
+      fill(0, 0, 0);
+      ellipse(this.x, this.y, 50, 50);
     }
 }
