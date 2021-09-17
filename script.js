@@ -85,7 +85,8 @@ function setup() {
 
      ballen.push(bal);
   }
-
+   var superbal = new Superbal(600,400,10,10);
+   ballen.push(superbal);
 }
 
 
