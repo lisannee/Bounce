@@ -17,10 +17,10 @@ class Bal {
       this.x = this.x + this.speedX;
       this.y = this.y + this.speedY;
   
-      if (this.x <=40 || this.x >= 1240) {
+      if (this.x <=20 || this.x >= 1260) {
         this.speedX = this.speedX * -1;
       }
-      if (this.y <=40 || this.y >= 680) {
+      if (this.y <=20 || this.y >= 700) {
         this.speedY = this.speedY * -1;
       }
     }
