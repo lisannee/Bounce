@@ -18,9 +18,13 @@ function setup() {
      var bal = new Bal(randomx, randomy, randmspeedX, randmspeedY);
 
      ballen.push(bal);
+     ballen.push(numberBal);
   }
    var superbal = new Superbal(600,400,10,10);
    ballen.push(superbal);
+
+   var numberbal = new Numberbal(300,400,20,20);
+   ballen.push(numberbal);
 }
 
 
